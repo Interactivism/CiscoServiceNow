@@ -1,0 +1,54 @@
+div.Error {
+/*
+  padding: 1em 1.5em;
+  background: #c00;
+  color: #fff;
+  font-weight: $heavy-font;
+  text-align: center;
+*/
+  color: $red;
+  font-size: 0.875em;
+  line-height: 2;
+}
+input.Error {
+  border-color: $red;
+}
+ul.Error {
+  color: $red;
+  font-size: 0.875em;
+}
+
+.Errors-wrapper {
+  
+}
+
+.InputAddOn + .Errors-wrapper > .Error {
+  margin: -1.25em 0 1em;
+}
+input + .Error,
+textarea + .Error {
+  margin: -0.75em 0 0.875em;
+  display: block;
+}
+.Form-compact {
+  input.Error,
+  textarea.Error {
+      &::-webkit-input-placeholder { color: #e7546f; }
+      &:-moz-placeholder { color: #e7546f; } /* Firefox 18- */
+      &::-moz-placeholder { color: #e7546f; } /* Firefox 19+ */
+      &:-ms-input-placeholder { color: #e7546f; }
+      //border-color: $red;
+      //z-index: 100;
+  }
+  
+}
+
+// default error class
+input + .error,
+textarea + .error {
+  margin: -0.75em 0 0.875em;
+  display: block;
+  color: $red;
+  font-size: 0.875em;
+  line-height: 2;
+}

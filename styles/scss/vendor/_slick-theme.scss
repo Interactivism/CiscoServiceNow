@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+// Default Variables
+
+// Slick icon entity codes outputs the following
+// "\2190" outputs ascii character "←"
+// "\2192" outputs ascii character "→"
+// "\2022" outputs ascii character "•"
+
+$slick-font-path: "./fonts/" !default;
+$slick-loader-path: "./" !default;
+
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+/* Slider */
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    z-index: 100;
+    opacity: 0.75;
+    
+    &:hover, &:focus {
+        outline: none;
+        background-color: transparent;
+        color: transparent;
+        opacity: 1;
+    }
+    
+    &.slick-disabled:before {
+        opacity: 0.75;
+    }
+    
+    &:before {
+        font-size: 2rem;
+        line-height: 1;
+        color: $text;
+        opacity: 0.75;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.slick-prev {
+    left: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-image: url('
+          data:image/svg+xml;utf-8,
+          <svg fill="#ffffff" height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+              <path d="M0-.5h24v24H0z" fill="none"/>
+          </svg>
+          ');
+          
+    [dir="rtl"] & {
+        left: auto;
+        right: -25px;
+    }
+}
+
+.slick-next {
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background-size: 10rem;
+    background-repeat: no-repeat;
+    background-image: url('
+        data:image/svg+xml;utf-8,
+        <svg fill="#ffffff" height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+            <path d="M0-.25h24v24H0z" fill="none"/>
+        </svg>
+        ');
+    
+    [dir="rtl"] & {
+        left: -25px;
+        right: auto;
+    }
+    
+}
+
+// no need to show arrow nav on mobile
+@media #{$--maxbreak-md} {
+  .slick-prev,
+  .slick-next {
+    display: none !important; 
+  }
+}
+
+/* Dots */
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 30px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    
+    li {
+        position: relative;
+        display: inline-block;
+        height: 0.75rem;
+        width: 0.75rem;
+        margin: 0 0.5rem;
+        padding: 0;
+        cursor: pointer;
+        
+        button {
+            border: 0;
+            background: $light-gray;
+            display: block;
+            height: 0.75rem;
+            width: 0.75rem;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 0;
+            cursor: pointer;
+            border-radius: 5rem;
+            opacity: 0.75;
+            
+            &:hover, &:focus {
+                outline: none;
+                opacity: 1;
+            }
+        }
+        
+        &.slick-active button {
+            opacity: 1;
+            background-color: $white;
+        }
+    }
+}

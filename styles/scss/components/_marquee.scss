@@ -1,0 +1,34 @@
+.Marquee {
+  
+  > div { 
+    padding: $--space;
+  }
+  
+  &-title {
+    margin: 1.50em 0 0.35em;
+  }
+  &-description {
+    font-size: 1.250em;
+    font-weight: $light-font;
+    max-width: 18.750em;
+    margin: 0 auto 1.5em;
+  }
+  &-subtext {
+    font-size: 0.750em;
+    font-weight: $light-font;
+    margin: 1em 0 0;
+  }
+  .Aligner {
+    height: 100vh;
+  }
+}
+@media #{$--break-lg} {
+  .Marquee {
+    padding: 0;
+    
+    .Aligner {
+      height: auto;
+      min-height: 37.500em;
+    }
+  }
+}

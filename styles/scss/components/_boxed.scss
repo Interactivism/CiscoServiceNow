@@ -1,0 +1,13 @@
+.Boxed {
+  background-color: $white;
+  padding: $--space-md;
+  border: 1px solid #e8e8e8;
+}
+
+.Table.Boxed {
+  border: 1px solid #e8e8e8;
+  
+  tbody > .Table-row:last-child td {
+    border-bottom: none;
+  }
+}

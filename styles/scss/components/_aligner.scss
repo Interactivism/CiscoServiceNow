@@ -1,0 +1,31 @@
+.Aligner {
+  display: flex;
+  align-items: center;
+  min-height: 24em;
+  justify-content: center;
+}
+
+.Aligner--columns {
+  flex-direction: column;
+  
+  [class*="Aligner-item"] {
+    width: 100%;
+  }
+}
+
+.Aligner-item {
+  flex: 1;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+  flex: none;
+  max-width: 50%;
+}

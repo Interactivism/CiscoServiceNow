@@ -1,0 +1,65 @@
+.Section {
+  padding: $--space-lg $--space;
+  
+  &:nth-child(odd) {
+    //background-color: $xlight-gray;
+    //overflow: hidden; /* Contain margins. */
+  }
+  &::before,
+  &::after {
+    content: '\00a0'; /* &nbsp; */
+    display: block;
+    height: 0px;
+    visibility: hidden;
+  }
+  &::before {
+    margin-bottom: $--space;
+  }
+  &::after {
+    margin-top: $--space;
+  }
+  
+  &-header {
+    margin-bottom: $--space + 2;
+  }
+  &-heading {
+    
+  }
+  &-subheading {
+    font-size: 1.125em;
+    font-weight: $light-font;
+    color: $light-gray;
+  }
+  &-subheading-small {
+    font-size: 0.85em;
+  }
+}
+
+@media #{$--break-lg} {
+  .Section {
+    padding: $--space-xl $--space;
+    
+    &::before {
+      //margin-bottom: $--space-lg;
+    }
+    &::after {
+      //margin-top: $--space-lg;
+    }
+    &-header {
+      margin-bottom: $--space-xl;
+    }
+  }
+}
+
+.Section--full {
+  //margin: 0;
+  width: 100%;
+}
+
+@media #{$--break-lg} {
+  .Section-list {
+    padding: 0;
+    text-align: center;
+    list-style-position: inside;
+  }
+}

@@ -1,0 +1,47 @@
+.Slider {
+  
+  &-item {
+    outline: 0;
+  }
+  
+  // individual content inside a Slider-item
+  .Slide-content {
+    padding: $--space-xl $--space;
+    min-height: 37.500em;
+    height: 70vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media #{$--maxbreak-md} {
+  .Slider {
+    
+    h1 {
+      font-size: 2.50em;
+    }
+    h3 {
+      
+    }
+    p {
+      
+    }
+  }
+}
+@media #{$--break-lg} {
+  .Slider {
+    
+    h1 {
+      
+    }
+    h3 {
+      font-size: 1.50em;
+    }
+    p {
+      font-size: 1.125em;
+    }
+  }
+}

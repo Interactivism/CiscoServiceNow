@@ -1,0 +1,45 @@
+.Wrap {
+  max-width: rem(980);
+  margin-left: auto;
+  margin-right: auto;
+  
+  &--xnarrow {
+    max-width: 26.688em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--narrow {
+    max-width: 34.500em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--wide {
+    max-width: $--width-lg;//67.500em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &--center {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.small-Wrap--pad {
+  
+  @media #{$--break-sm} {
+    padding-right: $--space;
+    padding-left: $--space;
+  }
+  
+}
+.medium-Wrap--pad {
+  
+  @media #{$--break-md} {
+    padding-right: $--space;
+    padding-left: $--space;
+  }
+  
+}

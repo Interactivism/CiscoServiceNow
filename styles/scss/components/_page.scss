@@ -1,0 +1,38 @@
+.Page {
+  
+  &-header {
+    padding: 4em;
+    background: $light-gray;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      font-weight: $normal-font;
+    }
+  }
+  &-title {
+    align-self: center;
+    text-align: center;
+    margin: 0;
+  }
+  &-subtitle {
+    align-self: center;
+    text-align: center;
+    margin: 0;
+    color: $medium-gray;
+    max-width: $--width-md;
+    font-size: 1.05em;
+    font-weight: $light-font;
+  }
+  &-content {
+    padding: $--space-md $--space;
+    
+    @media #{$--break-lg} {
+      padding: $--space-lg $--space;
+    }
+  }
+}
+.Page-title + .Page-subtitle {
+  margin: $--space-lg 0 0;
+}

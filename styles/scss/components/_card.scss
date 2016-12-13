@@ -1,0 +1,52 @@
+.Card {
+  border: 1px solid $gray;
+  background-color: $white;
+  border-radius: $--radius;
+  max-width: rem(360);
+  min-height: rem(440);
+  display: flex;
+  flex-direction: column;
+  
+  &-image {
+    flex: none;
+    img {
+      width: 100%;
+    }
+  }
+  
+  &-body {
+    flex: 1;
+    padding: $--space;
+  }
+    &-header {
+      
+    }
+    &-meta {
+      color: $medium-gray;
+      font-size: em(14);
+    }
+    &-description {
+      margin: $--space 0;
+    }
+    
+  &-footer {
+    flex: none;
+    padding: $--space;
+    font-size: em(13);
+    border-top: 1px solid $gray;
+  }
+  h3 {
+    margin: 0;
+  }
+  h4 {
+    margin: 0 0 $--space;
+  }
+  p {
+    color: $medium-gray;
+    font-size: 0.875em;
+    
+    &:first-child {
+      margin-top: $--space;
+    }
+  }
+}

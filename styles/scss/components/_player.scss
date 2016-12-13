@@ -1,0 +1,83 @@
+.Player {
+  
+}
+.Player-detail {
+  position: relative;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  padding: $--space-lg 0;
+  
+  display: flex;
+  align-items: center;
+}
+.Player-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  width: 100%;
+  
+  background: rgba(255,255,255,0.85);
+  //box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  
+  @media #{$--breakup-md} {
+    flex-direction: row;
+  }
+  
+}
+.Player-header {
+  text-align: center;
+  padding: $--space-md $--space-lg;
+}
+  .Player-avatar {
+    display: inline-block;
+    
+    img {
+      border-radius: 50%;
+      max-width: 130px;
+      height: auto;
+      
+      @media #{$--breakup-md} {
+        max-width: 160px;
+      }
+      
+    }
+    
+  }
+  .Player-name {
+    
+    a {
+      color: $text;
+    }
+  
+  }
+  .Player-toggle {
+    
+    @media #{$--breakup-md} {
+      display: none;
+    }
+    
+  }
+.Player-stats {
+  padding: $--space-md;
+  //font-size: 1.25em;
+  
+  @media #{$--break-sm} {
+    border-top: 1px solid $medium-gray;
+    margin: 0 $--space;
+    
+    &--hide-sm {
+      display: none;
+    }
+    
+  }
+  @media #{$--breakup-md} {
+    border-left: 1px solid $medium-gray;
+    padding: $--space-md $--space-lg;
+  }
+  
+  a {
+    color: $links-dark;
+  }
+}

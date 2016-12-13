@@ -1,0 +1,143 @@
+.Nav {
+  display: flex;
+  align-items: center;
+  font-weight: $normal-font;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  a:hover {
+    text-decoration: none;
+  }
+  ul {
+    
+  }
+  &-item {
+    padding: 1.5em;
+    
+    &-first {
+      margin-left: 0;
+    }
+    &-last {
+      margin-right: 0;
+    }
+    &-selected {
+      font-weight: $heavy-font;
+    }
+  }
+  .Nav-item {
+    &:hover {
+      background-color: $xlight-gray;
+    }
+  }
+  &-group {
+    
+    &:hover {
+      background-color: $xlight-gray;
+    }
+    .Nav-item {
+      display: block;
+      //padding: $--space-md;
+    }
+    &:hover > .Nav--dropdown {
+      display: block;
+    }
+  }
+  .Nav-burger {
+    cursor: pointer;
+    
+    .material-icons {
+      line-height: inherit;
+    }
+  }
+  &-closer {
+    margin-top: 1.25em;
+    padding-right: .725em;
+  }
+}
+@media #{$--breakup-md} {
+  .Nav {
+    
+    &-item {
+      //margin-left: $--space-sm;
+    }
+    &-group {
+      margin-left: $--space-sm;
+      position: relative;
+    }
+  }
+}
+
+.Nav-categories,
+.Nav-tags {
+  line-height: 1.75;
+  font-size: rem(14);
+  
+  a {
+    color: $medium-gray;
+  }
+  
+}
+
+.Nav-edit-post {
+  margin: rem(10) 0 0;
+}
+
+.Nav-posts {
+  
+  .Nav-links {
+    
+    @media #{$--breakup-md} {
+      display: flex;
+      
+      > div {
+        flex: 1;  
+      }
+    }
+    
+    a {
+      display: inline-block;
+      padding: $--space $--space-md;
+      background: $xlight-gray;
+      border: 1px solid $gray;
+      color: $dark-gray;
+      text-decoration: none;
+      line-height: 1.25;
+      
+      &:hover {
+        background: $light-gray;
+      }
+      
+      @media #{$--break-sm} {
+        width: 100%;
+        margin-bottom: rem(10);
+        font-size: rem(14);
+      }
+      
+    }
+    
+  }
+  
+  .Nav-previous {
+    
+    a:before {
+      @include arrowLeft();
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1em;
+    }
+  }
+  
+  .Nav-next {
+    text-align: right;
+    
+    a:after {
+      @include arrowRight();
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 1em;
+    }
+  }
+  
+}

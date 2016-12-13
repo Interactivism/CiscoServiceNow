@@ -1,0 +1,28 @@
+.Notice {
+  background-color: $blue;
+  color: $white;
+  padding: $--space $--space-md;
+  flex: none;
+  text-align: center;
+}
+
+.Notice-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  span {
+    display: block;
+    line-height: 20px;
+    background: $blue;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    color: $white;
+    text-align: center;
+  }
+}
+.Notice-count--inline {
+  position: relative;
+  display: inline-block;
+}

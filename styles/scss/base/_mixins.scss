@@ -1,0 +1,19 @@
+@mixin arrowLeft(){
+  content: url('
+    data:image/svg+xml;utf8,
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="10px" height="15px" viewBox="0 0 20 30" enable-background="new 0 0 20 30" xml:space="preserve">
+      <polygon fill="#999999" points="20,0 20,29.999 0,15 "/>
+    </svg>
+  ');
+}
+
+@mixin arrowRight(){
+  content: url('
+    data:image/svg+xml;utf8,
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="10px" height="15px" viewBox="0 0 20 30" enable-background="new 0 0 20 30" xml:space="preserve">
+      <polygon fill="#999999" points="0,30 0,0 20,15 "/>
+    </svg>
+  ');
+}

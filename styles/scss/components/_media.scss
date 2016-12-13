@@ -1,0 +1,64 @@
+.Media {
+  text-align: center;
+  margin: 0 $--space;
+  
+  &-figure {
+    margin: 0 auto $--space-lg;
+    max-width: 200px;
+      
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-body {
+    color: $light-gray;
+    
+    &-large {
+      font-size: 1.125em;
+      font-weight: $light-font;
+    }
+  }
+}
+
+@media #{$--break-lg} {
+  .Media {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    text-align: inherit;
+    
+    &-figure {
+      margin: 0 $--space-xl 0 0;
+      max-width: 350px;
+    }
+    &-body {
+      flex: 1;
+      
+      &-large {
+        font-size: 1.625em
+      }
+    }
+    &-body,
+    &-body :last-child {
+      margin-bottom: 0;
+    }
+    
+    &-title {
+      margin: 0 0 .5em;
+    }
+    
+    &--center {
+      align-items: center;
+    }
+    
+    &--reverse > .Media-figure {
+      order: 1;
+      margin: 0 0 0 $--space-xl;
+    }
+  }
+}
+
+
+
+

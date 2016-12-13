@@ -1,0 +1,54 @@
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+$--space:           1.000rem;
+$--space-sm:        0.5rem;
+$--space-md:        rem(42);
+$--space-lg:        3.000rem;
+$--space-xl:        5.625rem;
+$--space-xxl:       8.500rem;
+
+$--width-sm:        380px;
+$--width-md:        890px;
+$--width-lg:        1090px;
+
+$black:             #333;
+$white:             #FFF;
+
+$xlight-gray:       #FAFAFA;
+$light-gray:        #EFEFEF;
+$gray:              #e8e8e8;
+$medium-gray:       #A6A6A5;
+$dark-gray:         #4C4C4C;
+
+$orange:            #f5883f;
+$blue:              #0dacbd;
+$dark-blue:         #233244;
+$yellow:            #fcc52c;
+$red:               #ff5a5f;
+
+$purple:            #c08eef;
+$green:             rgb(86, 165, 91);
+$yellow-green:      #cced63;
+
+$brand-primary:     $red;
+$brand-secondary:   $blue;
+
+$text:              $dark-gray;
+$light-text:        #A0A0A0;
+$links:             #20a9db;
+$links-dark:        darken($links, 5%);
+
+$alert-blue:        #2e8084;
+
+$--radius:          3px;
+
+
+$body-color:        #e2e3ec;

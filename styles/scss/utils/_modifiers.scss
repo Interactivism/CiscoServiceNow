@@ -1,0 +1,151 @@
+
+.u-block {
+    display: block !important
+}
+
+.u-hide {
+    display: none !important
+}
+@media #{$--break-sm} {
+  .small-u-hide,
+  .m-u-hide {
+    display: none !important
+  }
+}
+@media #{$--break-md} {
+  .med-u-hide,
+  .t-u-hide {
+    display: none !important
+  }
+}
+@media #{$--break-lg} {
+  .large-u-hide,
+  .d-u-hide {
+    display: none !important
+  }
+}
+
+.u-hiddenVisually {
+    position: absolute !important;
+    overflow: hidden !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important
+}
+
+.u-inline {
+    display: inline !important
+}
+
+.u-inlineBlock {
+    display: inline-block !important;
+    max-width: 100%
+}
+
+.u-table {
+    display: table !important
+}
+
+.u-tableCell {
+    display: table-cell !important
+}
+
+.u-tableRow {
+    display: table-row !important
+}
+
+.u-textBreak {
+    word-wrap: break-word !important
+}
+
+.u-center {
+    text-align: center !important
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+.u-pointer {
+  cursor: pointer;
+}
+
+@media #{$--maxbreak-md} {
+  .md-u-center {
+    text-align: center !important
+  }
+}
+
+.u-textLeft {
+    text-align: left !important
+}
+
+.u-textRight {
+    text-align: right !important
+}
+
+.u-textInheritColor {
+    color: inherit !important
+}
+
+.u-textColorLight {
+  color: $light-gray;
+}
+.u-textLightWeight {
+  font-weight: $light-font;
+}
+
+.u-textKern {
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1, "kern";
+    -moz-font-feature-settings: "kern" 1, "kern";
+    font-feature-settings: "kern" 1, "kern";
+    -webkit-font-kerning: normal;
+    -moz-font-kerning: normal;
+    font-kerning: normal
+}
+
+.u-textNoWrap {
+    white-space: nowrap !important
+}
+
+.u-textTruncate {
+    max-width: 100%;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important
+}
+
+/*
+.gray-set {
+  div {
+    height: 100px;
+    width: 100px;
+  }
+  .g1 {
+    background-color: $xlight-gray;
+  }
+  .g2 {
+    background-color: $light-gray;
+  }
+  .g3 {
+    background-color: $gray;
+  }
+  .g4 {
+    background-color: $medium-gray;
+  }
+  .g5 {
+    background-color: $dark-gray;
+  }
+}
+  <div class="gray-set">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    <div class="g5"></div>
+  </div>
+*/

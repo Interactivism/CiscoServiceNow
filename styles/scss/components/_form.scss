@@ -1,0 +1,297 @@
+// setting up defaults
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+  -webkit-appearance: none; // removes ios styling 
+  display: block;
+  padding: em(14) em(20);
+  margin-bottom: 0.875em;
+  font-weight: $form-font-weight;
+  font-size: 1em;
+  letter-spacing: 0.03em;
+  color: $text;
+  vertical-align: middle;
+  box-shadow: none;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  font-family: $text-font;
+  background-color: $white;
+  border: 1px solid $gray;
+  border-radius: $--radius;
+  //@include transition(background-color 0.24s ease-in-out);
+  transition: all 0.24s ease-in-out;
+  
+  // a focused input (or hovered on)
+  &:focus,
+  &:active {
+    background-color: $white;
+    border-bottom-color: darken($gray, 10%);
+  } // end hover or focus
+
+  // error notification
+  &.error,
+  &.is-invalid {
+    color: $text;
+    border-color: $red;
+    background-color: $white;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    outline-color: $red;
+  } // end invalid input
+
+  // success notification
+  &.success,
+  &.is-valid {
+    color: $green;
+    border-color: $green;
+    background-color: $white;
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    outline-color: $green;
+  } // end valid input
+
+  // a disabled input
+  &[disabled],
+  &.is-disabled {
+    cursor: not-allowed;
+    background-color: $light-gray;
+    color: $dark-gray;
+
+    &:focus,
+    &:active {
+      background-color: $blue;
+    } // end disabled focus
+
+  } // end disabled input
+  
+  &.small-input {
+    padding: 5px 8px;
+    font-size: .875em;
+  }
+
+} // end input defaults
+
+
+// Style Placehoder text
+$placeholder:   lighten($medium-gray, 15%);
+
+::-webkit-input-placeholder { color: $placeholder; }
+:-moz-placeholder { color: $placeholder; } /* Firefox 18- */
+::-moz-placeholder { color: $placeholder; } /* Firefox 19+ */
+:-ms-input-placeholder { color: $placeholder; }
+
+// spacing out the password (thx @murtaugh)
+/*
+input[type="password"] {
+  letter-spacing: 0.2em;
+}
+*/
+
+// textarea
+textarea {
+  max-width: 100%;
+  line-height: 1.65em;
+  padding: em(14) em(20);
+  min-height: 120px;
+  font-family: $text-font;
+  
+  &.small-textarea {
+    height: 75px;
+    min-height: 75px;
+    min-height: 50px;
+  }
+}
+
+// selects
+select {
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='20'><path d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/><path d='M0-.75h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+@-moz-document url-prefix() {
+select{
+     background-image: none;
+  }
+}
+
+label + input,
+label + textarea,
+label + select {
+  margin-top: $--space-sm;
+}
+input + .Button--space {
+  //margin-top: 0.125rem;
+}
+
+.Input-droparea {
+    color: $medium-gray;
+    font-size: em(13);
+    display: block;
+    border: dashed $medium-gray 2px;
+    padding: $--space;
+    background-color: rgba(228, 243, 249, 0.88);
+    cursor: hand;
+    text-align: center;
+    
+    .icons {
+          font-size: 3em;
+    }
+}
+
+// compact form
+.Form--compact {
+  border: 1px solid $gray;
+  border-radius: $--radius;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 100%;
+  
+  input,
+  textarea,
+  select {
+    margin: -1px -1px 0 -1px;
+    border-radius: 0;
+    width: initial;
+    outline: none;
+    flex: 1 auto;
+  }
+  
+  .Form-radio {
+    padding: 14px 20px;
+    //color: $placeholder;
+    
+    .Form-radioTitle {
+      margin-bottom: $--space-sm;
+    }
+    label {
+      //color: $placeholder;
+    }
+    input[type="radio"] {
+      //margin-right: $--space-sm;
+    }
+  }
+  .Form-note {
+    color: $alert-blue;
+    font-size: 0.750em;
+    padding: $--space-sm;
+    background: lighten($alert-blue, 40%);
+    position: relative;
+    border-bottom: 1px solid $gray;
+  }
+  .Form-note:after, .Form-note:before {
+  	bottom: 100%;
+  	left: 30px;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  }
+  .Form-note:after {
+  	border-color: rgba(136, 183, 213, 0);
+  	border-bottom-color: lighten($alert-blue, 40%);
+  	border-width: 8px;
+  	margin-left: -8px;
+  }
+  .Form-note:before {
+  	border-color: rgba(151, 151, 151, 0);
+  	border-bottom-color: $gray;
+  	border-width: 9px;
+  	margin-left: -9px;
+  }
+  
+  .Form-item-last {
+    margin-bottom: -1px;
+  }
+  .Form-item-full {
+    width: 100% !important;
+    flex: 1 auto !important;
+  }
+  .Form-item-flex1 {
+    flex: 1 auto;
+  }
+  .Form-item-flex2 {
+    flex: 2 auto;
+  }
+  .Form-item-flex3 {
+    flex: 3 auto;
+  }
+  .InputAddOn-field,
+  .InputAddOn-item {
+    border-radius: 0 !important;
+  }
+}
+
+.Input-set {
+  background: $light-gray;
+  padding: $--space-md;
+  margin-bottom: rem(20);
+  
+  .Input-header {
+    margin-bottom: $--space-sm;
+    
+    label {
+      font-weight: $heavy-font;
+    }
+  }
+  .Input-field {
+    
+    input,
+    select,
+    textarea {
+      margin: 0;
+    }
+  }
+  .Input-instructions {
+    font-size: 0.875rem;
+    margin: $--space-sm 0;
+  }
+  
+  &--compact {
+    margin: 0 0 $--space-md;
+    border-radius: $--radius;
+    overflow: hidden;
+    
+    input,
+    .InputAddOn {
+      margin: 0;
+    }
+    .InputAddOn-field:first-child,
+    .InputAddOn-item:first-child,
+    .InputAddOn-field:last-child,
+    .InputAddOn-item:last-child {
+      border-radius: 0;
+    }
+  }
+}
+@media #{$--breakup-md} {
+  
+  .Input-set {
+    display: flex;
+  }
+  .Input-header {
+    margin-bottom: 0;
+    padding-right: $--space; 
+    flex: 1;
+  }
+  .Input-field {
+    flex: 2;
+  }
+}

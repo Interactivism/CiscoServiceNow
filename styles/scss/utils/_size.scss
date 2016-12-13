@@ -1,0 +1,46 @@
+.u-smaller {
+  font-size: 0.813em !important;
+}
+
+.u-bigger {
+  font-size: 1.125em !important;
+}
+
+.u-xl {
+  font-size: 1.625em !important;
+  line-height: inherit;
+}
+
+@media #{$--break-sm} {
+  .small-u-smaller {
+    font-size: 0.85em !important;
+  }
+  .small-u-bigger {
+    font-size: 1.125em !important;
+  }
+  .small-u-xbigger {
+    font-size: 1.625em !important;
+  }
+}
+@media #{$--break-md} {
+  .med-u-smaller {
+    font-size: 0.85em !important;
+  }
+  .med-u-bigger {
+    font-size: 1.125em !important;
+  }
+  .med-u-xbigger {
+    font-size: 1.625em !important;
+  }
+}
+@media #{$--break-lg} {
+  .large-u-smaller {
+    font-size: 0.85em !important;
+  }
+  .large-u-bigger {
+    font-size: 1.125em !important;
+  }
+  .large-u-xbigger {
+    font-size: 1.625em !important;
+  }
+}

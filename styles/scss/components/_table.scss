@@ -1,0 +1,81 @@
+table {
+  border-collapse: collapse;
+	border-spacing: 0;
+	font-size: rem(14);
+}
+thead {
+  background: $black;
+  color: $white;
+}
+tbody {
+  border: 1px solid $light-gray;
+  
+  td {
+    border-bottom: 1px solid $light-gray;
+  }
+  
+}
+th,
+td {
+  padding: $--space;
+}
+
+.Table-wrap {
+  overflow: auto;
+}
+
+.Table-stat {
+  text-align: center;
+}
+
+.Table {
+  border: 0;
+  width: 100%;
+  border-top: 1px solid $light-gray;
+  display: table;
+  position: relative;
+}
+th {
+  text-align: left;
+}
+.Table-row {
+  display: block;
+  border-bottom: 1px solid $light-gray;
+}
+.Table-cell,
+.Table-heading {
+  padding: $--space;
+  margin: 0;
+  display: table-cell;
+  
+  &--full {
+    display: block;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+.Table-cell {
+    
+  &:first-child {
+    padding-left: 0;
+  }
+}
+.Table-heading {
+  background-color: $dark-gray;
+  color: #f4f4f4;
+  font-weight: $normal-font;
+}
+.Table-filters {
+  margin: 0 0 $--space;
+}
+@media #{$--breakup-md} {
+  .Table-row {
+    display: table-row;
+  }
+  .Table-cell,
+  .Table-heading {
+    display: table-cell;
+    border-bottom: 1px solid $light-gray;
+  }
+}

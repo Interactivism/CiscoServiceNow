@@ -1,0 +1,33 @@
+.Divider {
+  border:none;
+  border-bottom: 1px solid $light-gray;
+}
+
+.Divider {
+  &--small {
+    @extend .Divider;
+    width: $--space-lg;
+  }
+  &--space {
+    margin: $--space-md 0;
+  }
+  &--blue {
+    border-color: $blue;
+  }
+  &--orange {
+    border-color: $orange;
+  }
+  &--dark {
+    border-color: $gray;
+  }
+  &--xdark {
+    border-color: $dark-gray;
+  }
+  &--padded {
+    margin:$--space-md auto;
+  }
+  &--padded-lg {
+    margin:$--space-lg auto;
+  }
+}
+  

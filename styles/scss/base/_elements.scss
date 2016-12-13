@@ -1,0 +1,160 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $body-color;
+  color: $text;
+  font: $body-font-weight 90%/1.4 $text-font;
+  letter-spacing: 0.03em;
+  text-rendering: optimizeLegibility;
+  
+  @media #{$--break-lg} {
+    font-size: 100%;
+  }
+  
+}
+@media (--high-dppx) {
+  html {
+    font-weight: $normal-font;
+  }
+}
+
+h1, h2 {
+  font-family: $display-font;
+}
+
+h1 {
+  font-weight: $heavy-font;
+  font-size: 2.5em;
+  -webkit-font-kerning: normal;
+  line-height: 1;
+  margin: .5rem 0 1rem;
+}
+
+h2 {
+  font-size: 2.00em;
+  font-weight: $heavy-font;
+  margin: 0 0 calc(0.5em/1.333);
+}
+
+h3 {
+  font-size: 1.125em;
+  font-weight: $heavy-font;
+  margin: 0 0 $--space;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: $medium-font;
+}
+
+p,
+pre {
+  margin: 0 0 $--space;
+}
+p {
+  line-height: 1.65;
+}
+
+label {
+  //font-size: em(14);
+}
+
+code,
+pre {
+  font-family: $display-font;
+}
+
+code {
+  font-size: .9em;
+  font-weight: normal;
+  color: #000;
+}
+
+pre > code {
+  font: inherit;
+  color: inherit;
+}
+
+a,
+a:visited {
+  color: $links;
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  //color: darken($links, 5%);
+  text-decoration: underline;
+}
+
+ol,
+ul {
+  margin: 0 0 1.5em;
+  padding: 0 0 0 1.5em;
+}
+ul {
+  list-style: square;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+li {
+  margin-bottom: 0.333em;
+}
+
+hr {
+  @extend .Divider;
+}
+
+figure {
+  margin: 0;
+}
+
+strong {
+  font-weight: $heavy-font;
+}
+
+dl {
+  
+  dt {
+    font-weight: $normal-font;
+    @extend .u-bigger;
+  }
+  dd {
+    margin: $--space-sm 0 $--space-lg;
+    font-weight: $light-font;
+    color: $medium-gray;
+    line-height: 1.65;
+  }
+}

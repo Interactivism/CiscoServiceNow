@@ -1,0 +1,26 @@
+/*
+@custom-media --break-sm (min-width: 384px);
+@custom-media --break-md (min-width: 576px);
+@custom-media --break-lg (min-width: 768px);
+
+@custom-media --high-dppx (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi), (min-resolution: 1.5dppx);
+*/
+
+/*
+$--break-sm:   "only screen and (min-width: 381px)";
+$--break-md:   "only screen and (min-width: 769px)";
+$--break-lg:   "only screen and (min-width: 1025px)";
+*/
+
+$--maxbreak-sm:   "only screen and (max-width: 380px)";
+$--maxbreak-md:   "only screen and (max-width: 768px)";
+$--maxbreak-lg:   "only screen and (max-width: 1024px)";
+
+$--breakup-sm:   "only screen and (min-width: 381px)";
+$--breakup-md:   "only screen and (min-width: 768px)";
+$--breakup-lg:   "only screen and (min-width: 1025px)";
+
+$--break-sm:   "only screen and (max-width: 767px)";
+$--break-md:   "(min-width: 768px) and (max-width: 1029px)";
+$--break-lg:   "only screen and (min-width: 1030px)";

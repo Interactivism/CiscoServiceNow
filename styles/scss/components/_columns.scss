@@ -1,0 +1,36 @@
+@mixin columns($count) {
+  -webkit-column-count: $count; /* Chrome, Safari, Opera */
+  -moz-column-count: $count; /* Firefox */
+  column-count: $count;
+}
+
+.Columns {
+  @include columns(2);
+}
+
+@media #{$--break-sm} {
+  .small-Columns--2 {
+    @include columns(2);
+  }
+}
+
+@media #{$--break-md} {
+  .medium-Columns--2 {
+    @include columns(2);
+  }
+  .medium-Columns--3 {
+    @include columns(3);
+  }
+}
+
+@media #{$--break-lg} {
+  .large-Columns--2 {
+    @include columns(2);
+  }
+  .large-Columns--3 {
+    @include columns(3);
+  }
+  .large-Columns--4 {
+    @include columns(3);
+  }
+}

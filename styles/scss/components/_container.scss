@@ -1,0 +1,14 @@
+.Container {
+  max-width: 58.438em;
+  margin: 0 auto;
+  
+  &--narrow {
+    max-width: 34.500em;
+    margin: 0 auto;
+  }
+  &--wide {
+    max-width: 63.750em;
+    margin: 0 auto;
+  }
+}
+

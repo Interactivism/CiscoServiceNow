@@ -1,0 +1,47 @@
+.InputAddOn {
+  display: flex;
+  margin-bottom: 1.5em;
+  
+  input {
+    margin: 0 !important;
+  }
+}
+
+.InputAddOn-field {
+  flex: 1;
+}
+.InputAddOn-field:not(:first-child) {
+  border-left: 0;
+}
+.InputAddOn-field:not(:last-child) {
+  border-right: 0;
+}
+
+.InputAddOn-item {
+  background-color: $xlight-gray;
+  color: $medium-gray;
+  font: inherit;
+  font-weight: normal;
+  font-size: 1.125em;
+  display: flex;
+  align-items: center;
+}
+
+.InputAddOn-field {
+  border: 1px solid $light-gray;
+}
+.InputAddOn-field,
+.InputAddOn-item {
+  padding: em(14) em(20);
+}
+.InputAddOn-field:first-child,
+.InputAddOn-item:first-child {
+  border-radius: $--radius 0 0 $--radius;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  border-left: 1px solid $light-gray;
+}
+.InputAddOn-field:last-child,
+.InputAddOn-item:last-child {
+  border-radius: 0 $--radius $--radius 0;
+}
