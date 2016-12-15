@@ -2,13 +2,14 @@
   -webkit-appearance: none;
   transition: background-color 0.2s;
   display: inline-block;
-  padding: $--space $--space-md;
+  padding: rem(13) $--space-md;
   cursor: pointer;
+  border-radius: $--radius;
   background-color: $bgcolor;
   color: $txtcolor !important;
   font-weight: $normal-font;
   font-family: $text-font;
-  font-size: 1rem;
+  font-size: rem(13);
   line-height: normal;
   text-decoration: none;
   text-align: center;
@@ -27,7 +28,7 @@
 }
 
 .Button-primary {
-  @include button ($brand-primary, $white);
+  @include button ($green, $white);
   border: 0;
   text-transform: uppercase;
   
@@ -50,47 +51,6 @@
     color: $white;
   }
 }
-
-.Button-action {
-  @include button($xlight-gray, $medium-gray);
-  font-size: 1rem;
-  border: 1px solid $gray;
-  padding: $--space $--space-lg;
-  
-  &:active,
-  &:hover {
-    border: 1px solid darken($gray, 10%);
-    color: $medium-gray;
-  }
-  &--filled {
-    background-color: $medium-gray;
-    color: $white;
-    border: none;
-    
-    &:hover {
-      background-color: darken($medium-gray, 10%);
-      border: none;
-      color: $white;
-    }
-  }
-  
-  .Notice-count {
-    top: -5px;
-    right: -5px;
-  }
-}
-
-.Button--orange {
-  background-color: $orange;
-  color: $white;
-  
-  &:active,
-  &:focus,
-  &:hover {
-    background: darken($orange, 5%);
-  }
-}
-
 
 .Button--wide {
   padding-right: 1.5em;

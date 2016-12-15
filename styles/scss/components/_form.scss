@@ -17,7 +17,7 @@ select,
 textarea {
   -webkit-appearance: none; // removes ios styling 
   display: block;
-  padding: em(14) em(20);
+  padding: em(10) em(20);
   margin-bottom: 0.875em;
   font-weight: $form-font-weight;
   font-size: 1em;
@@ -29,8 +29,8 @@ textarea {
   outline: 0;
   width: 100%;
   font-family: $text-font;
-  background-color: $white;
-  border: 1px solid $gray;
+  background-color: #f1f2f8;
+  border: 1px solid #b8bbc8;
   border-radius: $--radius;
   //@include transition(background-color 0.24s ease-in-out);
   transition: all 0.24s ease-in-out;
@@ -127,6 +127,11 @@ select {
 select{
      background-image: none;
   }
+}
+
+label {
+  font-size: em(13);
+  text-transform: uppercase;
 }
 
 label + input,

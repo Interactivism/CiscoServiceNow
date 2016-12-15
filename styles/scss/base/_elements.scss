@@ -25,12 +25,16 @@ html, body {
   }
 }
 
+h1, h2, h3, h4 {
+  color: #526476;
+  font-weight: normal;
+}
+
 h1, h2 {
   font-family: $display-font;
 }
 
 h1 {
-  font-weight: $heavy-font;
   font-size: 2.5em;
   -webkit-font-kerning: normal;
   line-height: 1;
@@ -39,19 +43,16 @@ h1 {
 
 h2 {
   font-size: 2.00em;
-  font-weight: $heavy-font;
   margin: 0 0 calc(0.5em/1.333);
 }
 
 h3 {
-  font-size: 1.125em;
-  font-weight: $heavy-font;
+  font-size: rem(18);
   margin: 0 0 $--space;
 }
 
 h4 {
   font-size: 1em;
-  font-weight: $medium-font;
 }
 
 p,
@@ -60,10 +61,6 @@ pre {
 }
 p {
   line-height: 1.65;
-}
-
-label {
-  //font-size: em(14);
 }
 
 code,

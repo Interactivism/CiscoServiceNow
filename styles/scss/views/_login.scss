@@ -7,4 +7,34 @@
 }
   .Login-header {
     text-align: center;
+    margin-bottom: rem(30);
+    
+    .Logo {
+      margin-bottom: rem(40);
+    }
+    
   }
+  .Login-form {
+    margin-bottom: rem(25);
+    
+    .Button-primary {
+      margin-top: rem(10);
+    }
+    
+  }
+  .Login-actions {
+    text-align: center;
+    font-size: rem(13);
+    margin-bottom: rem(40);
+  }
+  .Login-footer {
+    text-align: center;
+    color: #c8cbd8;
+    font-size: rem(13);
+    
+    span {
+      font-size: rem(10);
+    }
+    
+  }
+  

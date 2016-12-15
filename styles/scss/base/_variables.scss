@@ -9,7 +9,7 @@ $browser-context: 16; // Default
 }
 
 $--space:           1.000rem;
-$--space-sm:        0.5rem;
+$--space-sm:        rem(10);
 $--space-md:        rem(42);
 $--space-lg:        3.000rem;
 $--space-xl:        5.625rem;
@@ -35,20 +35,21 @@ $yellow:            #fcc52c;
 $red:               #ff5a5f;
 
 $purple:            #c08eef;
-$green:             rgb(86, 165, 91);
+$green:             #89ba18;
 $yellow-green:      #cced63;
 
 $brand-primary:     $red;
 $brand-secondary:   $blue;
 
-$text:              $dark-gray;
-$light-text:        #A0A0A0;
+$text:              #85929e;
+$light-text:        #aaadb8;
+$dark-text:         #34495e;
 $links:             #20a9db;
 $links-dark:        darken($links, 5%);
 
 $alert-blue:        #2e8084;
 
-$--radius:          3px;
+$--radius:          5px;
 
 
-$body-color:        #e2e3ec;
+$body-color:        #e2e3ec; // site bg color
